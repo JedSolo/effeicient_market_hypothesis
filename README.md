@@ -117,7 +117,34 @@ The project follows a structured empirical workflow:
 -   Regime classification and robustness analysis
 -   Summary report and visualizations
 
-## Contributions
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/JedSolo/effeicient_market_hypothesis
+```
+
+Go to the project directory
+
+```bash
+  cd effeicient_market_hypothesis
+```
+
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Run
+
+```bash
+  Run Appendix.ipynb
+```
+
+## Authors
 
 -    King Kyei Boakye – turtledovesbeloved97@gmail.com
 -    Solomon Owusu Sarfo – solomonsarfo045@gmail.com
