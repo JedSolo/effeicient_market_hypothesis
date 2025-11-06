@@ -79,12 +79,6 @@ The project follows a structured empirical workflow:
 -   Regime segmentation (bull, bear, sideways)
 -   Assessment of efficiency under varying market conditions
 
-| Name   | Age | Score |
-|:-------|:---:|------:|
-| Alice  | 21  | 88.5  |
-| Bob    | 19  | 91.0  |
-
-
 ## Hypotheses Tested
 ------------------------------------------------------------------------------
 
@@ -93,19 +87,7 @@ The project follows a structured empirical workflow:
 | **ARIMA(1,0,1)**  | Linear autocorrelation  | Weak-form EMH  |
 | **GARCH(1,1)**    | Volatility clustering  | Time-varying volatility inconsistent with EMH |
 | **XGBoost**    | Nonlinear dependencies  |  Predictability contradicts EMH |
-
-
-  | Model             | Captures          | EMH Hypothesis Tested                    |
-  |------------------ | ----------------- | -----------------------------------------|
-  |**ARIMA(1,0,1)**    |Linear               | Weak-form EMH                         |
-                     autocorrelation   
-
-  |**GARCH(1,1)**    | Volatility        | Time-varying volatility inconsistent with |
-                     clustering        EMH
-
-  |**XGBoost**       | Nonlinear         | Predictability contradicts EMH            |
-                     dependencies     
-  ------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
 ## Tools & Technologies
 
