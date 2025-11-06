@@ -1,4 +1,4 @@
-# Market Efficiency Analysis Using Econometrics and Machine Learning (2015--2024)
+# TESTING THE LIMITS OF THE EFFICIENT MARKET HYPOTHESIS: EVIDENCE FROM EQUITY AND CRYPTOCURRENCY MARKETS
 
 This project investigates the robustness of the **Efficient Market
 Hypothesis (EMH)** across two contrasting asset classes:
@@ -15,11 +15,11 @@ with market efficiency.
 ## Research Questions
 
 1.  Do daily returns of SPX and BTC follow a random walk, or do they
-    show predictable patterns?\
+    show predictable patterns?
 2.  Can machine learning models (e.g., XGBoost) outperform econometric
-    baselines such as ARIMA and GARCH?\
+    baselines such as ARIMA and GARCH?
 3.  Do predictive patterns translate into meaningful economic value when
-    backtested?\
+    backtested?
 4.  How does market efficiency differ between a mature equity market and
     an emerging cryptocurrency market across different regimes (bull,
     bear, stagnant)?
@@ -62,21 +62,21 @@ The project follows a structured empirical workflow:
 
 ### 4. Model Evaluation
 
-**Statistical Metrics:**\
-- RMSE\
-- MAE\
-- Directional accuracy\
+**Statistical Metrics:**
+- RMSE
+- MAE
+- Directional accuracy
 - Out-of-sample R²
 
-**Economic Metrics (Backtesting):**\
-- Cumulative returns\
-- Sharpe ratio\
+**Economic Metrics (Backtesting):**
+- Cumulative returns
+- Sharpe ratio
 - Maximum drawdown
 
 ### 5. Robustness & Regime Analysis
 
--   Walk-forward validation\
--   Regime segmentation (bull, bear, sideways)\
+-   Walk-forward validation
+-   Regime segmentation (bull, bear, sideways)
 -   Assessment of efficiency under varying market conditions
 
 ## Hypotheses Tested
@@ -97,35 +97,33 @@ The project follows a structured empirical workflow:
 ## Tools & Technologies
 
 -   **Python 3.12**
--   `statsmodels` (ARIMA, diagnostic tests)\
--   `arch` (GARCH modeling)\
--   `xgboost`, `scikit-learn` (machine learning)\
--   `pandas`, `numpy` (data processing)\
--   `matplotlib` (visualization)\
+-   `statsmodels` (ARIMA, diagnostic tests)
+-   `arch` (GARCH modeling)
+-   `xgboost`, `scikit-learn` (machine learning)
+-   `pandas`, `numpy` (data processing)
+-   `matplotlib` (visualization)
 -   Executed in **Google Colab**
 
 ## Goals & Objectives
 
--   Test whether daily returns of SPX and BTC conform to weak-form EMH\
--   Compare econometric and machine learning predictability\
--   Convert predictions into trading strategies\
--   Evaluate economic significance through backtesting\
--   Analyze differences across market regimes\
+-   Test whether daily returns of SPX and BTC conform to weak-form EMH
+-   Compare econometric and machine learning predictability
+-   Convert predictions into trading strategies
+-   Evaluate economic significance through backtesting
+-   Analyze differences across market regimes
 -   Provide insights for portfolio management and market behaviour
 
 ## Project Deliverables
 
--   Clean datasets and preprocessing scripts\
--   ARIMA and GARCH modeling notebooks\
--   XGBoost modeling notebook with feature engineering\
--   Backtesting engine\
--   Regime classification and robustness analysis\
+-   Clean datasets and preprocessing scripts
+-   ARIMA and GARCH modeling notebooks
+-   XGBoost modeling notebook with feature engineering
+-   Backtesting engine
+-   Regime classification and robustness analysis
 -   Summary report and visualizations
-
-## License
-
-Specify your license here.
 
 ## Contributions
 
-Contributions, issues, and suggestions are welcome.
+King Kyei Boakye – turtledovesbeloved97@gmail.com
+Solomon Owusu Sarfo – solomonsarfo045@gmail.com
+
