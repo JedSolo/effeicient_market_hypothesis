@@ -79,6 +79,12 @@ The project follows a structured empirical workflow:
 -   Regime segmentation (bull, bear, sideways)
 -   Assessment of efficiency under varying market conditions
 
+| Name   | Age | Score |
+|:-------|:---:|------:|
+| Alice  | 21  | 88.5  |
+| Bob    | 19  | 91.0  |
+
+
 ## Hypotheses Tested
 
   ------------------------------------------------------------------------------
