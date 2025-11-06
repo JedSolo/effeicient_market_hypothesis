@@ -91,7 +91,7 @@ The project follows a structured empirical workflow:
                      clustering        EMH
 
   **XGBoost**        Nonlinear         Predictability contradicts EMH
-                     dependencies      
+                     dependencies     
   ------------------------------------------------------------------------------
 
 ## Tools & Technologies
