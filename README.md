@@ -86,8 +86,16 @@ The project follows a structured empirical workflow:
 
 
 ## Hypotheses Tested
+------------------------------------------------------------------------------
 
-  ------------------------------------------------------------------------------
+| Model   | Captures | EMH Hypothesis Tested |
+|:-------|:---:|------:|
+| **ARIMA(1,0,1)**  | Linear autocorrelation  | Weak-form EMH  |
+| **GARCH(1,1)**    | Volatility clustering  | ime-varying volatility inconsistent with EMH |
+| **XGBoost**    | Nonlinear dependencies  | 91.0  | Predictability contradicts EMH |
+----------------------------------------------------------------------------------------------
+
+
   | Model             | Captures          | EMH Hypothesis Tested                    |
   |------------------ | ----------------- | -----------------------------------------|
   |**ARIMA(1,0,1)**    |Linear               | Weak-form EMH                         |
