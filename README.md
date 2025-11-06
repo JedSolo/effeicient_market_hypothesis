@@ -1,43 +1,131 @@
-**Replications**
-Most of the data used are proxies that are similar to the actual data used.
+# Market Efficiency Analysis Using Econometrics and Machine Learning (2015--2024)
 
-**The Challenge**
+This project investigates the robustness of the **Efficient Market
+Hypothesis (EMH)** across two contrasting asset classes:
 
-Most of the datasets from those papers are:
+-   **S&P 500 Index (SPX)** --- mature, highly liquid equity market\
+-   **Bitcoin (BTC-USD)** --- emerging, sentiment-driven cryptocurrency
+    market
 
-Either time-series price/return data (which can often be pulled from Yahoo Finance, FRED, or EIA), or
+By combining traditional econometric models with modern machine learning
+techniques, the study examines whether daily returns exhibit random walk
+behaviour (supporting EMH) or reveal predictable structures inconsistent
+with market efficiency.
 
-Specialized datasets (like CDS spreads, entropy measures, niche cryptocurrencies) which may not be openly downloadable, but can often be proxied with public data.
+## Research Questions
 
-Since I don't have access to external files, I will:
+1.  Do daily returns of SPX and BTC follow a random walk, or do they
+    show predictable patterns?\
+2.  Can machine learning models (e.g., XGBoost) outperform econometric
+    baselines such as ARIMA and GARCH?\
+3.  Do predictive patterns translate into meaningful economic value when
+    backtested?\
+4.  How does market efficiency differ between a mature equity market and
+    an emerging cryptocurrency market across different regimes (bull,
+    bear, stagnant)?
 
-Identify the datasets each of your cited works used.
+## Methodology Overview
 
-Download equivalent datasets (or closest proxies) in Python (using yfinance, pandas-datareader, etc.).
+The project follows a structured empirical workflow:
 
-Use replication-ready code snippets for each dataset + method.
+### 1. Data Collection & Preprocessing
 
-**Datasets From Key References and their Proxies**
+-   Daily SPX and BTC prices (2015--2024) via **Yahoo Finance**
+    (`yfinance`).
+-   Transformation and cleaning:
+    -   Log returns computation
+    -   Forward-fill for missing values
+    -   Date alignment across markets
+    -   Stationarity testing (ADF)
+-   Descriptive statistics and preliminary diagnostics
 
-Schindler (2010) - Securitized real estate (REIT indices, 1992-2009).
-Data source: FTSE NAREIT, EPRA/NAREIT indices.
-Proxy: U.S. REIT Index via Yahoo Finance (^RMZ).
+### 2. Econometric Modeling
 
-Charif et al. (2017) - MENA equity markets.
-Data source: Country indices (Saudi, UAE, Egypt, etc.).
-Proxy: MSCI country indices (sometimes available via Yahoo as ETFs, e.g., EGPT for Egypt, QAT for Qatar).
+#### ARIMA (1,0,1)
 
-Milosevic-Avdalovic (2017) - Balkan stock markets (January effect).
-Data source: Belgrade Stock Exchange, regional indices.
-Proxy: Harder to get directly; can use ETFs that track Eastern Europe (CEE, ERUS).
+-   Tests for linear autocorrelation and weak-form EMH.
+-   Residual diagnostics via Ljung--Box Q-test.
 
-Onali & Goddard (2011) - European equity markets (fractal/Hurst).
-Data source: FTSE, DAX, CAC 40, Euro Stoxx.
-Proxy: Yahoo Finance tickers: ^FTSE, ^GDAXI, ^FCHI, ^STOXX50E.
+#### GARCH (1,1)
 
-Kilic (2023), Kim (2022) - Cryptocurrencies (Bitcoin, Ethereum, others).
-Data source: CoinMarketCap, CryptoCompare.
-Proxy: Yahoo Finance tickers: "BTC-USD", "ETH-USD".
-Ariff (2017) - Spot vs options market integration (US equities).
-Data source: OptionMetrics (subscription).
-Proxy: Hard to replicate fully, but you can use CBOE VIX (^VIX) and S&P 500 (^GSPC) as partial indicators.
+-   Captures volatility clustering and conditional heteroskedasticity.
+-   Interprets α (shock impact), β (volatility persistence), and α+β
+    (long memory).
+
+### 3. Machine Learning Modeling
+
+#### XGBoost Regression
+
+-   Captures nonlinear patterns and higher-order interactions.
+-   Includes features such as lagged returns, rolling volatilities,
+    volume changes, regime indicators, and GARCH variance.
+
+### 4. Model Evaluation
+
+**Statistical Metrics:**\
+- RMSE\
+- MAE\
+- Directional accuracy\
+- Out-of-sample R²
+
+**Economic Metrics (Backtesting):**\
+- Cumulative returns\
+- Sharpe ratio\
+- Maximum drawdown
+
+### 5. Robustness & Regime Analysis
+
+-   Walk-forward validation\
+-   Regime segmentation (bull, bear, sideways)\
+-   Assessment of efficiency under varying market conditions
+
+## Hypotheses Tested
+
+  ------------------------------------------------------------------------------
+  Model              Captures          EMH Hypothesis Tested
+  ------------------ ----------------- -----------------------------------------
+  **ARIMA(1,0,1)**   Linear            Weak-form EMH
+                     autocorrelation   
+
+  **GARCH(1,1)**     Volatility        Time-varying volatility inconsistent with
+                     clustering        EMH
+
+  **XGBoost**        Nonlinear         Predictability contradicts EMH
+                     dependencies      
+  ------------------------------------------------------------------------------
+
+## Tools & Technologies
+
+-   **Python 3.12**
+-   `statsmodels` (ARIMA, diagnostic tests)\
+-   `arch` (GARCH modeling)\
+-   `xgboost`, `scikit-learn` (machine learning)\
+-   `pandas`, `numpy` (data processing)\
+-   `matplotlib` (visualization)\
+-   Executed in **Google Colab**
+
+## Goals & Objectives
+
+-   Test whether daily returns of SPX and BTC conform to weak-form EMH\
+-   Compare econometric and machine learning predictability\
+-   Convert predictions into trading strategies\
+-   Evaluate economic significance through backtesting\
+-   Analyze differences across market regimes\
+-   Provide insights for portfolio management and market behaviour
+
+## Project Deliverables
+
+-   Clean datasets and preprocessing scripts\
+-   ARIMA and GARCH modeling notebooks\
+-   XGBoost modeling notebook with feature engineering\
+-   Backtesting engine\
+-   Regime classification and robustness analysis\
+-   Summary report and visualizations
+
+## License
+
+Specify your license here.
+
+## Contributions
+
+Contributions, issues, and suggestions are welcome.
