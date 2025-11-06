@@ -3,7 +3,7 @@
 This project investigates the robustness of the **Efficient Market
 Hypothesis (EMH)** across two contrasting asset classes:
 
--   **S&P 500 Index (SPX)** --- mature, highly liquid equity market\
+-   **S&P 500 Index (SPX)** --- mature, highly liquid equity market
 -   **Bitcoin (BTC-USD)** --- emerging, sentiment-driven cryptocurrency
     market
 
@@ -124,6 +124,6 @@ The project follows a structured empirical workflow:
 
 ## Contributions
 
-King Kyei Boakye – turtledovesbeloved97@gmail.com
-Solomon Owusu Sarfo – solomonsarfo045@gmail.com
+-    King Kyei Boakye – turtledovesbeloved97@gmail.com
+-    Solomon Owusu Sarfo – solomonsarfo045@gmail.com
 
